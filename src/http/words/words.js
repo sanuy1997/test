@@ -3,7 +3,7 @@ import Api from '../api';
 class WordsApi extends Api {
   constructor() {
     const headers = {
-      'X-Rapidapi-Key': '32e0a521a4mshc96a453f7c72d10p1af1f4jsnbf5686c67247',
+      'X-Rapidapi-Key': process.env.VUE_APP_API_KEY,
     };
     super(headers);
   }

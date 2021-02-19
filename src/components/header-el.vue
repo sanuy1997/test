@@ -27,7 +27,7 @@ export default {
 <style lang="scss">
 .header {
     border-radius: 6px;
-    background: #2980b9;
+    background: $blue-color;
     color: white;
     margin-top: 5px;
     margin-bottom: 18px;
