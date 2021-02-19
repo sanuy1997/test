@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss">
 #app {
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   box-sizing: border-box;
   background: #f8f4f4;
   min-height: 100vh;

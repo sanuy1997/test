@@ -27,7 +27,7 @@ export default {
         height: 50px;
         padding: 0 20px;
         width: 100%;
-        border-radius: 8px;
+        border-radius: 6px;
         border: none;
         font-size: 20px;
     }

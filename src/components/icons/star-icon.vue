@@ -22,7 +22,7 @@ export default {
     },
     stroke: {
       type: String,
-      default: '#6ec0fb',
+      default: '#2980b9',
     },
   },
 };
