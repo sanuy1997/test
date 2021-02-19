@@ -29,7 +29,7 @@
       <div
         v-for="(word, index) in currentWords"
         :key="index"
-        :draggable="(!searchValue && !filter) || isFavorite"
+        :draggable="isDraggable"
         class="main-page__result"
         @drop.stop="onDrop($event, word.word)"
         @dragover.prevent
@@ -37,7 +37,7 @@
         @dragstart.stop="startDrag($event, word.word)"
       >
         <div class="main-page__result-info" @click="word.showDetail = !word.showDetail">
-          <drag-icon class="main-page__drag-icon" v-if="isFavorite" />
+          <drag-icon v-if="isDraggable" class="main-page__drag-icon" />
           <h3>{{ word.word }}</h3>
           <span>{{ word.partOfSpeech }}</span>
           <span>{{ word.definition }}</span>
@@ -93,6 +93,9 @@ export default {
         return this.searchValue || this.filter ? this.searchingFavoriteWords : this.favoriteWords;
       }
       return this.searchValue || this.filter ? this.words : this.favoriteWords;
+    },
+    isDraggable() {
+      return (!this.searchValue && !this.filter) || this.isFavorite;
     },
   },
   methods: {
