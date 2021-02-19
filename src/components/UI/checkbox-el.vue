@@ -1,5 +1,5 @@
 <template>
-  <div class="checkbox" @click="($refs.checkbox.checked = !$refs.checkbox.checked), updateInput()">
+  <div class="checkbox">
     <input
       type="checkbox"
       class="checkbox__checkbox"
@@ -8,7 +8,11 @@
       :checked="shouldBeChecked"
       @change="updateInput()"
     />
-    <label class="checkbox__label">{{ label }}</label>
+    <label
+      class="checkbox__label"
+      @click="($refs.checkbox.checked = !$refs.checkbox.checked), updateInput()"
+      >{{ label }}</label
+    >
   </div>
 </template>
 

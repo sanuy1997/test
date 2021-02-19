@@ -1,5 +1,5 @@
 <template>
-  <div class="radio" @click="$emit('change', $refs.radio.value)">
+  <div class="radio">
     <input
       type="radio"
       class="radio__radio"
@@ -8,7 +8,7 @@
       :checked="modelValue === value"
       @change="$emit('change', $event.target.value)"
     />
-    <label class="radio__label">{{ label }}</label>
+    <label class="radio__label" @click="$emit('change', $refs.radio.value)">{{ label }}</label>
   </div>
 </template>
 
